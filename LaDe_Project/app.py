@@ -24,11 +24,11 @@ def load_data():
     # Sử dụng os.path để code tự tìm file trong cùng thư mục với file app.py,
     # giúp chạy mượt mà cả ở máy cá nhân lẫn trên máy chủ Streamlit Cloud.
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(current_dir, 'pickup_small.csv')
+    file_path = os.path.join(current_dir, 'pickup_jl.csv')
     
     # Trường hợp dự phòng: nếu chạy cục bộ mà chưa có file bên cạnh, tìm ở thư mục LaDe_Project
-    if not os.path.exists(file_path) and os.path.exists('LaDe_Project/pickup_small.csv'):
-        file_path = 'LaDe_Project/pickup_small.csv'
+    if not os.path.exists(file_path) and os.path.exists('LaDe_Project/pickup_jl.csv'):
+        file_path = 'LaDe_Project/pickup_jl.csv'
         
     df = pd.read_csv(file_path) 
     return df
